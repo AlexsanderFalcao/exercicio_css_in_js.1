@@ -1,21 +1,26 @@
 import styled from 'styled-components'
 
-export const StyledForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+export const FormPesquisa = styled.form`
+  display: grid;
+  grid-template-columns: 1fr auto;
+  background-color: ${(props) => props.theme.corSecundaria};
+  padding: 32px;
+  border-radius: 12px;
+  margin-top: 40px;
 `
 
-export const BtnPesquisar = styled.button`
-  background-color: var(--cor-principal);
-  border: none;
-  padding: 10px 16px;
-  font-size: 16px;
-  color: white;
+export const ButtonPesquisar = styled.button`
+  background-color: ${(props) => props.theme.corPrincipal};
+  border: 1px solid ${(props) => props.theme.corPrincipal};
+  height: 40px;
+  padding: 0 16px;
+  font-size: 18px;
+  color: ${(props) => props.theme.corSecundaria};
+  margin-left: 8px;
   cursor: pointer;
-  border-radius: 4px;
+`
 
-  &:hover {
-    background-color: darkblue;
-  }
+export const InputPesquisar = styled.input`
+  padding: 0 16px;
+  outline-color: ${(props) => props.theme.corPrincipal};
 `
